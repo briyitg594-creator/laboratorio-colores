@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Laboratorio de Color Maestro</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <button id="openMenu" class="menu-btn">☰</button>
+
+    <div id="sidebar" class="sidebar">
+        <button id="closeMenu" class="close-btn">&times;</button>
+        <div class="sidebar-content">
+            <h3>Teoría y Conceptos</h3>
+            <button class="action-btn" onclick="openModal('modalTeoria')">Teoría del Color</button>
+            <button class="action-btn" onclick="openModal('modalRGB')">Modelo RGB</button>
+            <button class="action-btn" onclick="openModal('modalCMYK')">Modelo CMYK</button>
+        </div>
+    </div>
+
+    <div id="modalTeoria" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal('modalTeoria')">&times;</span>
+            <h2>Teoría del Color</h2>
+            <p>La teoría del color es el conjunto de reglas que explica cómo se crean, combinan y perciben los colores. Su herramienta principal es el círculo cromático, que organiza los colores en primarios (rojo, amarillo y azul), secundarios y terciarios para ayudarnos a entender sus relaciones.
+
+Esta teoría se basa en tres propiedades: el matiz (el nombre del color), la saturación (su intensidad o pureza) y el valor (qué tan claro u oscuro es). Al dominar estas reglas, podemos crear armonías visuales, generar contrastes y utilizar la psicología del color para transmitir emociones, como calma con el azul o energía con el rojo.</p>
+        </div>
+    </div>
+
+    <div id="modalRGB" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal('modalRGB')">&times;</span>
+            <h2 style="color: #ff4d4d;">Modelo RGB</h2>
+            <p><strong>Digital:</strong> El concepto RGB es un modelo de color basado en la mezcla de luz roja (Red), verde (Green) y azul (Blue). Se le llama "aditivo" porque, al sumar estos tres colores en su máxima intensidad, se crea la luz blanca, mientras que la ausencia total de ellos genera el color negro.
+
+En las pantallas de móviles y computadoras, cada color se forma combinando estos tres tonos en una escala que va del 0 al 255. Por ejemplo, si pones el rojo al máximo y los otros dos en cero, obtienes un rojo puro; si mezclas rojo y verde, obtienes amarillo.
+
+Es el estándar universal para todo lo que emite luz propia. A diferencia de las impresoras que usan tinta, el sistema RGB usa píxeles de luz, lo que permite mostrar millones de colores vibrantes que vemos en fotos, videos y aplicaciones digitales.</p>
+        </div>
+    </div>
+
+    <div id="modalCMYK" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal('modalCMYK')">&times;</span>
+            <h2 style="color: #38bdf8;">Modelo CMYK</h2>
+            <p><strong>Impresión:</strong> El modelo CMYK es el sistema de color sustractivo diseñado exclusivamente para la impresión física. Sus siglas representan las cuatro tintas base: cian, magenta, amarillo y negro (Key). A diferencia de las pantallas, este modelo utiliza pigmentos que absorben la luz sobre el papel.
++2
+
+Funciona restando luz al fondo blanco mediante porcentajes de tinta (del 0% al 100%). Se añade el negro por separado para lograr sombras profundas y textos nítidos, ya que la mezcla de los otros tres colores solo produce un café oscuro. Por esto, los colores impresos suelen verse menos brillantes que en un monitor, pues dependen de la luz ambiental que refleja el papel.</p>
+        </div>
+    </div>
+
+    <div class="main-container">
+        <h1>Explorador Cromático</h1>
+        
+        <div class="section">
+            <canvas id="colorCanvas" width="280" height="280"></canvas>
+            <div id="preview-main" class="preview-box main-preview"></div>
+            <div id="color-name" class="color-name-tag">Toca el círculo</div>
+            <code id="color-val">rgb(0, 0, 0)</code>
+        </div>
+
+        <div id="psychology-card" class="info-card hidden">
+            <h3 id="psy-title">Psicología</h3>
+            <div class="psy-content">
+                <p><strong>Emociones:</strong> <span id="psy-emotions">-</span></p>
+                <p><strong>Personalidad:</strong> <span id="psy-personality">-</span></p>
+            </div>
+        </div>
+
+        <hr>
+
+        <div class="section">
+            <h3>Matizados del Color</h3>
+            <p>Hacia el Blanco (Claros):</p>
+            <div class="shade-row" id="light-row"></div>
+            <p>Hacia el Negro (Oscuros):</p>
+            <div class="shade-row" id="dark-row"></div>
+            
+            <p style="margin-top:15px; font-size: 0.8rem; color: #94a3b8;">Contraste Complementario:</p>
+            <div id="comp-ideal" class="preview-box small"></div>
+        </div>
+
+        <hr>
+
+        <div class="section mixer-section">
+            <h3>Estación de Mezcla</h3>
+            <div class="mixer-controls">
+                <input type="color" id="color1" class="large-color-input" value="#ff0000">
+                <span class="plus-sign">+</span>
+                <input type="color" id="color2" class="large-color-input" value="#ffff00">
+            </div>
+            <button onclick="mezclar()" class="mix-button">MEZCLAR COLORES</button>
+            <div id="result-mix" class="preview-box result-preview"></div>
+            <div id="mix-name" class="color-name-tag mix-result-name">Resultado</div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
