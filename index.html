@@ -13,89 +13,101 @@
     <div id="sidebar" class="sidebar">
         <button id="closeMenu" class="close-btn">&times;</button>
         <div class="sidebar-content">
-            <h3>Teoría y Conceptos</h3>
-            <button class="action-btn" onclick="openModal('modalTeoria')">Teoría del Color</button>
-            <button class="action-btn" onclick="openModal('modalRGB')">Modelo RGB</button>
-            <button class="action-btn" onclick="openModal('modalCMYK')">Modelo CMYK</button>
+            <h3>Conceptos de Armonía</h3>
+            <button class="action-btn" onclick="openModal('m-mono')">Monocromático</button>
+            <button class="action-btn" onclick="openModal('m-analog')">Análogos</button>
+            <button class="action-btn" onclick="openModal('m-comp')">Complementarios</button>
+            <button class="action-btn" onclick="openModal('m-triad')">Tríada</button>
+            <button class="action-btn" onclick="openModal('m-tetra')">Tetráedrica</button>
+            <hr>
+            <h3>Sistemas</h3>
+            <button class="action-btn" onclick="openModal('modalRGB')">RGB (Digital)</button>
+            <button class="action-btn" onclick="openModal('modalCMYK')">CMYK (Imprenta)</button>
         </div>
     </div>
 
-    <div id="modalTeoria" class="modal">
-        <div class="modal-content">
-            <span class="close-modal" onclick="closeModal('modalTeoria')">&times;</span>
-            <h2>Teoría del Color</h2>
-            <p>La teoría del color es el conjunto de reglas que explica cómo se crean, combinan y perciben los colores. Su herramienta principal es el círculo cromático, que organiza los colores en primarios (rojo, amarillo y azul), secundarios y terciarios para ayudarnos a entender sus relaciones.
+    <div id="m-mono" class="modal"><div class="modal-content"><span class="close-modal" onclick="closeModal('m-mono')">&times;</span><h2>Monocromático</h2><p>Usa un solo tono variando su saturación y brillo. Es la opción más elegante y fácil de digerir visualmente.</p></div></div>
+    
+    <div id="m-analog" class="modal"><div class="modal-content"><span class="close-modal" onclick="closeModal('m-analog')">&times;</span><h2>Análogos</h2><p>Colores que están uno al lado del otro. Crean diseños armoniosos y naturales (como el atardecer).</p></div></div>
+    
+    <div id="m-comp" class="modal"><div class="modal-content"><span class="close-modal" onclick="closeModal('m-comp')">&times;</span><h2>Complementarios</h2><p>Colores opuestos que crean el máximo contraste. Ideal para llamar la atención en botones o logotipos.</p></div></div>
+    
+    <div id="m-triad" class="modal"><div class="modal-content"><span class="close-modal" onclick="closeModal('m-triad')">&times;</span><h2>Tríada</h2><p>Tres colores equidistantes. Ofrece un alto contraste visual pero manteniendo el equilibrio y la armonía.</p></div></div>
+    
+    <div id="m-tetra" class="modal"><div class="modal-content"><span class="close-modal" onclick="closeModal('m-tetra')">&times;</span><h2>Tetráedrica</h2><p>Doble complemento (dos parejas de opuestos). Es la armonía más rica y compleja; se recomienda elegir un color dominante.</p></div></div>
 
-Esta teoría se basa en tres propiedades: el matiz (el nombre del color), la saturación (su intensidad o pureza) y el valor (qué tan claro u oscuro es). Al dominar estas reglas, podemos crear armonías visuales, generar contrastes y utilizar la psicología del color para transmitir emociones, como calma con el azul o energía con el rojo.</p>
-        </div>
-    </div>
-
-    <div id="modalRGB" class="modal">
-        <div class="modal-content">
-            <span class="close-modal" onclick="closeModal('modalRGB')">&times;</span>
-            <h2 style="color: #ff4d4d;">Modelo RGB</h2>
-            <p><strong>Digital:</strong> El concepto RGB es un modelo de color basado en la mezcla de luz roja (Red), verde (Green) y azul (Blue). Se le llama "aditivo" porque, al sumar estos tres colores en su máxima intensidad, se crea la luz blanca, mientras que la ausencia total de ellos genera el color negro.
-
-En las pantallas de móviles y computadoras, cada color se forma combinando estos tres tonos en una escala que va del 0 al 255. Por ejemplo, si pones el rojo al máximo y los otros dos en cero, obtienes un rojo puro; si mezclas rojo y verde, obtienes amarillo.
-
-Es el estándar universal para todo lo que emite luz propia. A diferencia de las impresoras que usan tinta, el sistema RGB usa píxeles de luz, lo que permite mostrar millones de colores vibrantes que vemos en fotos, videos y aplicaciones digitales.</p>
-        </div>
-    </div>
-
-    <div id="modalCMYK" class="modal">
-        <div class="modal-content">
-            <span class="close-modal" onclick="closeModal('modalCMYK')">&times;</span>
-            <h2 style="color: #38bdf8;">Modelo CMYK</h2>
-            <p><strong>Impresión:</strong> El modelo CMYK es el sistema de color sustractivo diseñado exclusivamente para la impresión física. Sus siglas representan las cuatro tintas base: cian, magenta, amarillo y negro (Key). A diferencia de las pantallas, este modelo utiliza pigmentos que absorben la luz sobre el papel.
-+2
-
-Funciona restando luz al fondo blanco mediante porcentajes de tinta (del 0% al 100%). Se añade el negro por separado para lograr sombras profundas y textos nítidos, ya que la mezcla de los otros tres colores solo produce un café oscuro. Por esto, los colores impresos suelen verse menos brillantes que en un monitor, pues dependen de la luz ambiental que refleja el papel.</p>
-        </div>
-    </div>
+    <div id="modalRGB" class="modal"><div class="modal-content"><span class="close-modal" onclick="closeModal('modalRGB')">&times;</span><h2 style="color:#ff4d4d">Modelo RGB</h2><p>Red, Green, Blue. Basado en la síntesis aditiva de luz. Se usa en todas las pantallas digitales.</p></div></div>
+    
+    <div id="modalCMYK" class="modal"><div class="modal-content"><span class="close-modal" onclick="closeModal('modalCMYK')">&times;</span><h2 style="color:#38bdf8">Modelo CMYK</h2><p>Cian, Magenta, Amarillo y Negro. Basado en pigmentos. Es el estándar para la industria de la impresión física.</p></div></div>
 
     <div class="main-container">
-        <h1>Explorador Cromático</h1>
+        <h1>Laboratorio Maestro</h1>
         
         <div class="section">
             <canvas id="colorCanvas" width="280" height="280"></canvas>
             <div id="preview-main" class="preview-box main-preview"></div>
-            <div id="color-name" class="color-name-tag">Toca el círculo</div>
+            
+            <div class="saturation-container">
+                <p>Nivel de Saturación:</p>
+                <input type="range" id="sat-slider" min="0" max="100" value="100">
+            </div>
+
+            <div id="color-name" class="color-name-tag">Selecciona un color</div>
             <code id="color-val">rgb(0, 0, 0)</code>
         </div>
 
         <div id="psychology-card" class="info-card hidden">
             <h3 id="psy-title">Psicología</h3>
-            <div class="psy-content">
-                <p><strong>Emociones:</strong> <span id="psy-emotions">-</span></p>
-                <p><strong>Personalidad:</strong> <span id="psy-personality">-</span></p>
+            <p id="psy-emotions">-</p>
+        </div>
+
+        <hr>
+
+        <div class="section harmonies-section">
+            <h3>Visualizador de Armonías</h3>
+            
+            <div class="h-item">
+                <p>Monocromático</p>
+                <div class="shade-row" id="mono-row"></div>
+                <canvas id="monoCanvas" class="mini-map" width="100" height="100"></canvas>
+            </div>
+
+            <div class="h-item highlight">
+                <p>Complementario Directo</p>
+                <div class="shade-row" id="comp-row"></div>
+                <canvas id="compCanvas" class="mini-map" width="100" height="100"></canvas>
+            </div>
+
+            <div class="h-item">
+                <p>Análogos</p>
+                <div class="shade-row" id="analog-row"></div>
+                <canvas id="analogCanvas" class="mini-map" width="100" height="100"></canvas>
+            </div>
+
+            <div class="h-item">
+                <p>Tríada (Triángulo)</p>
+                <div class="shade-row" id="triad-row"></div>
+                <canvas id="triadCanvas" class="mini-map" width="100" height="100"></canvas>
+            </div>
+
+            <div class="h-item">
+                <p>Tetráedrica (Rectángulo)</p>
+                <div class="shade-row" id="tetra-row"></div>
+                <canvas id="tetraCanvas" class="mini-map" width="100" height="100"></canvas>
             </div>
         </div>
 
         <hr>
 
         <div class="section">
-            <h3>Matizados del Color</h3>
-            <p>Hacia el Blanco (Claros):</p>
-            <div class="shade-row" id="light-row"></div>
-            <p>Hacia el Negro (Oscuros):</p>
-            <div class="shade-row" id="dark-row"></div>
-            
-            <p style="margin-top:15px; font-size: 0.8rem; color: #94a3b8;">Contraste Complementario:</p>
-            <div id="comp-ideal" class="preview-box small"></div>
-        </div>
-
-        <hr>
-
-        <div class="section mixer-section">
-            <h3>Estación de Mezcla</h3>
+            <h3>Mezcladora de Pigmentos</h3>
             <div class="mixer-controls">
-                <input type="color" id="color1" class="large-color-input" value="#ff0000">
-                <span class="plus-sign">+</span>
-                <input type="color" id="color2" class="large-color-input" value="#ffff00">
+                <input type="color" id="color1" class="large-input" value="#ff0000">
+                <span style="font-size:24px">+</span>
+                <input type="color" id="color2" class="large-input" value="#ffff00">
             </div>
-            <button onclick="mezclar()" class="mix-button">MEZCLAR COLORES</button>
+            <button onclick="mezclar()" class="mix-btn">CALCULAR MEZCLA</button>
             <div id="result-mix" class="preview-box result-preview"></div>
-            <div id="mix-name" class="color-name-tag mix-result-name">Resultado</div>
         </div>
     </div>
 
