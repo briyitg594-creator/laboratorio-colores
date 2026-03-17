@@ -8,106 +8,121 @@
 </head>
 <body>
 
-    <button id="openMenu" class="menu-btn">☰</button>
+    <<button id="openMenu" class="menu-btn">☰ Teoría del Color</button>
 
-    <div id="sidebar" class="sidebar">
-        <button id="closeMenu" class="close-btn">&times;</button>
-        <div class="sidebar-content">
-            <h3>Conceptos de Armonía</h3>
-            <button class="action-btn" onclick="openModal('m-mono')">Monocromático</button>
-            <button class="action-btn" onclick="openModal('m-analog')">Análogos</button>
-            <button class="action-btn" onclick="openModal('m-comp')">Complementarios</button>
-            <button class="action-btn" onclick="openModal('m-triad')">Tríada</button>
-            <button class="action-btn" onclick="openModal('m-tetra')">Tetráedrica</button>
-            <hr>
-            <h3>Sistemas</h3>
-            <button class="action-btn" onclick="openModal('modalRGB')">RGB (Digital)</button>
-            <button class="action-btn" onclick="openModal('modalCMYK')">CMYK (Imprenta)</button>
-        </div>
+<div id="sidebar" class="sidebar">
+    <button id="closeMenu" class="close-btn">&times;</button>
+    <div class="sidebar-content">
+        <h3>Propiedades</h3>
+        <button class="action-btn" onclick="openModal('m-tono')">Tonalidad</button>
+        <button class="action-btn" onclick="openModal('m-sat')">Saturación</button>
+        <button class="action-btn" onclick="openModal('m-bri')">Brillo</button>
+        
+        <hr>
+        
+        <h3>Mapas de Armonía</h3>
+        <button class="action-btn" onclick="openModal('m-mono')">Monocromo</button>
+        <button class="action-btn" onclick="openModal('m-comp')">Complemento</button>
+        <button class="action-btn" onclick="openModal('m-split')">Dividido</button>
+        <button class="action-btn" onclick="openModal('m-triad')">Tríada</button>
+        <button class="action-btn" onclick="openModal('m-analog')">Análogos</button>
+        <button class="action-btn" onclick="openModal('m-tetra')">Tetráedrica</button>
+
+        <hr>
+        <button class="action-btn" onclick="openModal('m-psy')">Psicología del Color</button>
     </div>
+</div>
 
-    <div id="m-mono" class="modal"><div class="modal-content"><span class="close-modal" onclick="closeModal('m-mono')">&times;</span><h2>Monocromático</h2><p>Usa un solo tono variando su saturación y brillo. Es la opción más elegante y fácil de digerir visualmente.</p></div></div>
-    
-    <div id="m-analog" class="modal"><div class="modal-content"><span class="close-modal" onclick="closeModal('m-analog')">&times;</span><h2>Análogos</h2><p>Colores que están uno al lado del otro. Crean diseños armoniosos y naturales (como el atardecer).</p></div></div>
-    
-    <div id="m-comp" class="modal"><div class="modal-content"><span class="close-modal" onclick="closeModal('m-comp')">&times;</span><h2>Complementarios</h2><p>Colores opuestos que crean el máximo contraste. Ideal para llamar la atención en botones o logotipos.</p></div></div>
-    
-    <div id="m-triad" class="modal"><div class="modal-content"><span class="close-modal" onclick="closeModal('m-triad')">&times;</span><h2>Tríada</h2><p>Tres colores equidistantes. Ofrece un alto contraste visual pero manteniendo el equilibrio y la armonía.</p></div></div>
-    
-    <div id="m-tetra" class="modal"><div class="modal-content"><span class="close-modal" onclick="closeModal('m-tetra')">&times;</span><h2>Tetráedrica</h2><p>Doble complemento (dos parejas de opuestos). Es la armonía más rica y compleja; se recomienda elegir un color dominante.</p></div></div>
+<div id="m-tono" class="modal"><div class="modal-content"><span class="close-modal" onclick="closeModal('m-tono')">&times;</span><h2>Tonalidad</h2><p>Es el estado puro del color, sin blanco ni negro. Es lo que nos permite diferenciar el rojo del azul.</p></div></div>
 
-    <div id="modalRGB" class="modal"><div class="modal-content"><span class="close-modal" onclick="closeModal('modalRGB')">&times;</span><h2 style="color:#ff4d4d">Modelo RGB</h2><p>Red, Green, Blue. Basado en la síntesis aditiva de luz. Se usa en todas las pantallas digitales.</p></div></div>
-    
-    <div id="modalCMYK" class="modal"><div class="modal-content"><span class="close-modal" onclick="closeModal('modalCMYK')">&times;</span><h2 style="color:#38bdf8">Modelo CMYK</h2><p>Cian, Magenta, Amarillo y Negro. Basado en pigmentos. Es el estándar para la industria de la impresión física.</p></div></div>
+<div id="m-sat" class="modal"><div class="modal-content"><span class="close-modal" onclick="closeModal('m-sat')">&times;</span><h2>Saturación</h2><p>Representa la viveza o palidez de un color. Una saturación baja acerca el color al gris.</p></div></div>
+
+<div id="m-bri" class="modal"><div class="modal-content"><span class="close-modal" onclick="closeModal('m-bri')">&times;</span><h2>Brillo</h2><p>Es la intensidad lumínica. Define si un color es más claro (hacia el blanco) o más oscuro (hacia el negro).</p></div></div>
+
+<div id="m-mono" class="modal"><div class="modal-content"><span class="close-modal" onclick="closeModal('m-mono')">&times;</span><h2>Monocromo</h2><p>Utiliza un solo tono y varía su saturación y brillo. Es una armonía elegante y fácil de aplicar.</p></div></div>
+
+<div id="m-comp" class="modal"><div class="modal-content"><span class="close-modal" onclick="closeModal('m-comp')">&times;</span><h2>Complemento</h2><p>Colores opuestos en el círculo. Generan el máximo contraste y son ideales para resaltar elementos importantes.</p></div></div>
+
+<div id="m-split" class="modal"><div class="modal-content"><span class="close-modal" onclick="closeModal('m-split')">&times;</span><h2>Dividido</h2><p>Se elige un color y se combina con los dos que están al lado de su opuesto. Contraste suave y agradable.</p></div></div>
+
+<div id="m-triad" class="modal"><div class="modal-content"><span class="close-modal" onclick="closeModal('m-triad')">&times;</span><h2>Tríada</h2><p>Tres colores situados en los vértices de un triángulo equilátero. Es una combinación muy equilibrada y alegre.</p></div></div>
+
+<div id="m-analog" class="modal"><div class="modal-content"><span class="close-modal" onclick="closeModal('m-analog')">&times;</span><h2>Análogos</h2><p>Son los colores vecinos en el círculo cromático. Comparten un tono base y crean diseños muy relajantes.</p></div></div>
+
+<div id="m-tetra" class="modal"><div class="modal-content"><span class="close-modal" onclick="closeModal('m-tetra')">&times;</span><h2>Tetráedrica</h2><p>Usa dos pares de colores complementarios. Es la armonía más compleja y colorida, ideal para diseños dinámicos.</p></div></div>
+
+<div id="m-psy" class="modal"><div class="modal-content"><span class="close-modal" onclick="closeModal('m-psy')">&times;</span><h2>Psicología</h2><p>Estudia cómo los colores influyen en el estado de ánimo y la percepción del usuario en el diseño gráfico.</p></div></div>
 
     <div class="main-container">
         <h1>Laboratorio Maestro</h1>
         
         <div class="section">
             <canvas id="colorCanvas" width="280" height="280"></canvas>
-            <div id="preview-main" class="preview-box main-preview"></div>
+            <div id="preview-main" class="preview-box"></div>
             
-            <div class="saturation-container">
-                <p>Nivel de Saturación:</p>
+            <div class="control-panel">
+                <p>Ajustar Saturación:</p>
                 <input type="range" id="sat-slider" min="0" max="100" value="100">
             </div>
 
-            <div id="color-name" class="color-name-tag">Selecciona un color</div>
+            <div id="color-name" class="color-name-tag">Toca el círculo</div>
             <code id="color-val">rgb(0, 0, 0)</code>
         </div>
 
         <div id="psychology-card" class="info-card hidden">
-            <h3 id="psy-title">Psicología</h3>
-            <p id="psy-emotions">-</p>
+            <h3>Psicología del Color</h3>
+            <div class="psy-grid">
+                <div><strong>Emociones:</strong> <p id="psy-emotions">-</p></div>
+                <div><strong>Personalidad:</strong> <p id="psy-personality">-</p></div>
+            </div>
+        </div>
+
+        <div class="info-card">
+            <h3>Escala de Brillo (Tonalidades)</h3>
+            <div id="shades-bar" class="shades-full-bar"></div>
+            <div class="shades-labels"><span>Más Claro</span><span>Más Oscuro</span></div>
         </div>
 
         <hr>
 
         <div class="section harmonies-section">
-            <h3>Visualizador de Armonías</h3>
-            
-            <div class="h-item">
-                <p>Monocromático</p>
-                <div class="shade-row" id="mono-row"></div>
-                <canvas id="monoCanvas" class="mini-map" width="100" height="100"></canvas>
+            <h3>Mapas de Armonía Visual</h3>
+            <div class="h-row">
+                <div class="h-item">
+                    <p>Monocromo</p>
+                    <div class="shade-bar" id="mono-row"></div>
+                    <canvas id="monoCanvas" class="mini-map" width="90" height="90"></canvas>
+                </div>
+                <div class="h-item">
+                    <p>Complemento</p>
+                    <div class="shade-bar" id="comp-row"></div>
+                    <canvas id="compCanvas" class="mini-map" width="90" height="90"></canvas>
+                </div>
             </div>
-
-            <div class="h-item highlight">
-                <p>Complementario Directo</p>
-                <div class="shade-row" id="comp-row"></div>
-                <canvas id="compCanvas" class="mini-map" width="100" height="100"></canvas>
+            <div class="h-row">
+                <div class="h-item split-box">
+                    <p>Dividido</p>
+                    <div class="shade-bar" id="split-row"></div>
+                    <canvas id="splitCanvas" class="mini-map" width="90" height="90"></canvas>
+                </div>
+                <div class="h-item">
+                    <p>Tríada</p>
+                    <div class="shade-bar" id="triad-row"></div>
+                    <canvas id="triadCanvas" class="mini-map" width="90" height="90"></canvas>
+                </div>
             </div>
-
-            <div class="h-item">
-                <p>Análogos</p>
-                <div class="shade-row" id="analog-row"></div>
-                <canvas id="analogCanvas" class="mini-map" width="100" height="100"></canvas>
+            <div class="h-row">
+                <div class="h-item">
+                    <p>Análogos</p>
+                    <div class="shade-bar" id="analog-row"></div>
+                    <canvas id="analogCanvas" class="mini-map" width="90" height="90"></canvas>
+                </div>
+                <div class="h-item tetra-box">
+                    <p>Tetráedrica</p>
+                    <div class="shade-bar" id="tetra-row"></div>
+                    <canvas id="tetraCanvas" class="mini-map" width="90" height="90"></canvas>
+                </div>
             </div>
-
-            <div class="h-item">
-                <p>Tríada (Triángulo)</p>
-                <div class="shade-row" id="triad-row"></div>
-                <canvas id="triadCanvas" class="mini-map" width="100" height="100"></canvas>
-            </div>
-
-            <div class="h-item">
-                <p>Tetráedrica (Rectángulo)</p>
-                <div class="shade-row" id="tetra-row"></div>
-                <canvas id="tetraCanvas" class="mini-map" width="100" height="100"></canvas>
-            </div>
-        </div>
-
-        <hr>
-
-        <div class="section">
-            <h3>Mezcladora de Pigmentos</h3>
-            <div class="mixer-controls">
-                <input type="color" id="color1" class="large-input" value="#ff0000">
-                <span style="font-size:24px">+</span>
-                <input type="color" id="color2" class="large-input" value="#ffff00">
-            </div>
-            <button onclick="mezclar()" class="mix-btn">CALCULAR MEZCLA</button>
-            <div id="result-mix" class="preview-box result-preview"></div>
         </div>
     </div>
 
